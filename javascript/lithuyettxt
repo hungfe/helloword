@@ -1,0 +1,15 @@
+-Java script là một ngôn ngữ lập trình
+-Để nhúng ta dùng file.js
+Các cách xuất dữ liệu
+-alert hiển thị hộp thoại
+-document.write hiển thị lên web
+-console.log hiển thị trong console > Inspect
+-document.gêtlementById('id').innerHTML=' hello " kéo thẻ về và hển thị trên web
+Các cách nhập dữ liệu
+-prompt nhập trn h thoại
+-confirm hiện ok hoặc cancle
+-cách nhập bằng ô input
++tạo thẻ in put xong đặt thẻ input đặt id
+tạo button xong đăt onclick='layDulieu'
++ tạo function laydulieu() { let dulieu = document.getElementById('id ô input').value;
++alert(duLieu);}
