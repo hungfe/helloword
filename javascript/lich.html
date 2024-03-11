@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm lịch</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th><h1>Kiểm tra số ngày trong tháng</h1></th>
+  </tr>
+  <tr>
+    <td><input type="number" id="hi"> <button onclick="kiemtra()">Check</button></td>
+  </tr>
+  <tr>
+    <td id="ketqua"></td>
+  </tr>
+</table>
+<script>
+  function kiemtra() {
+    let a = +document.getElementById('hi').value;
+    if (a > 0 && a <= 12) {
+      switch (a) {
+        case 4:
+          document.getElementById('ketqua').innerHTML = 'Số ngày tháng 4 là : 30 ngày'
+          break;
+        case 2:
+          document.getElementById('ketqua').innerHTML = 'Số ngày tháng 2 là : 29 ngày'
+          break;
+        case 6:
+          document.getElementById('ketqua').innerHTML = 'Số ngày tháng 6 là : 30 ngày'
+          break;
+        case 9:
+          document.getElementById('ketqua').innerHTML = 'Số ngày tháng 9 là : 30 ngày'
+          break;
+        case 11:
+          document.getElementById('ketqua').innerHTML = 'Số ngày tháng 11 là : 30 ngày'
+          break;
+        default :
+          document.getElementById('ketqua').innerHTML = `Số ngày tháng ${a} là : 31 ngày`
+
+      }
+    }
+    else {
+      document.getElementById('ketqua').innerHTML = 'mày không biết lịch à ?'
+    }
+  }
+</script>
+</body>
+</html>

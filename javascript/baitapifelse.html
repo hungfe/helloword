@@ -5,41 +5,146 @@
     <title>Bài tập jame cấu truc điều kiện</title>
 </head>
 <body>
+<!--Bài tập tính độ BMI-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th><h1>Tính chỉ số cân nặng</h1></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--    <td>nhập cân nặng: (kg)<input type="text" id="in1"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>nhập chiều cao: (m)<input type="text" id="in2"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><button onclick="bmi()">Kiểm tra</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th id="ketqua"></th>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<script>-->
+<!--    function bmi() {-->
+<!--        let a = +document.getElementById('in1').value;-->
+<!--        let b = +document.getElementById('in2').value;-->
+<!--        let BMI = a / (b*b);-->
+<!--        if (BMI < 18.5) {-->
+<!--            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI + 'Underweight'-->
+<!--        }-->
+<!--        else if (BMI >= 18.5 && BMI < 25.0 ) {-->
+<!--            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ '' + BMI +' '+ 'Normal'-->
+<!--        }-->
+<!--        else if (BMI >= 25.0 && BMI < 30) {-->
+<!--            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI +' '+ 'Overweight'-->
+<!--        }-->
+<!--        else {-->
+<!--            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ ' ' + BMI +' ' + 'Obese'-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<!--bai làm lịch-->
 <table>
     <tr>
-        <th><h1>Tính chỉ số cân nặng</h1></th>
+        <th><h1>Kiểm tra số ngày trong tháng</h1></th>
     </tr>
     <tr>
-    <td>nhập cân nặng: (kg)<input type="text" id="in1"></td>
+        <td><input type="number" id="hi"> <button onclick="kiemtra()">Check</button></td>
     </tr>
     <tr>
-        <td>nhập chiều cao: (m)<input type="text" id="in2"></td>
-    </tr>
-    <tr>
-        <td><button onclick="bmi()">Kiểm tra</button></td>
-    </tr>
-    <tr>
-        <th id="ketqua"></th>
+        <td id="ketqua"></td>
     </tr>
 </table>
 <script>
-    function bmi() {
-        let a = +document.getElementById('in1').value;
-        let b = +document.getElementById('in2').value;
-        let BMI = a / (b*b);
-        if (BMI < 18.5) {
-            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI + 'Underweight'
-        }
-        else if (BMI >= 18.5 && BMI < 25.0 ) {
-            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ '' + BMI +' '+ 'Normal'
-        }
-        else if (BMI >= 25.0 && BMI < 30) {
-            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI +' '+ 'Overweight'
+    function kiemtra() {
+        let a = +document.getElementById('hi').value;
+        if (a > 0 && a <= 12) {
+            switch (a) {
+                case 4:
+                    document.getElementById('ketqua').innerHTML = 'Số ngày tháng 4 là : 30 ngày'
+                    break;
+                case 2:
+                    document.getElementById('ketqua').innerHTML = 'Số ngày tháng 2 là : 29 ngày'
+                    break;
+                case 6:
+                    document.getElementById('ketqua').innerHTML = 'Số ngày tháng 6 là : 30 ngày'
+                    break;
+                case 9:
+                    document.getElementById('ketqua').innerHTML = 'Số ngày tháng 9 là : 30 ngày'
+                    break;
+                case 11:
+                    document.getElementById('ketqua').innerHTML = 'Số ngày tháng 11 là : 30 ngày'
+                    break;
+                default :
+                    document.getElementById('ketqua').innerHTML = `Số ngày tháng ${a} là : 31 ngày`
+
+            }
         }
         else {
-            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ ' ' + BMI +' ' + 'Obese'
+            document.getElementById('ketqua').innerHTML = 'mày không biết lịch à ?'
         }
     }
 </script>
+<!--Bài làm máy tính-->
+<!--<style>-->
+<!--    th input {-->
+<!--        width: 40px;-->
+<!--        height: 40px;-->
+<!--    }-->
+<!--    td input {-->
+<!--        height: 30px;-->
+<!--        text-align: right;-->
+<!--    }-->
+<!--</style>-->
+<!--<table>-->
+<!--    <tr><td colspan="4"><input type="text" id="calc" value="0"></td></tr>-->
+<!--    <tr>-->
+<!--        <th><input type="button" value="(" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value=")" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="%" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="AC" onclick="clearData()"></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th><input type="button" value="7" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="8" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="9" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="/" onclick="getData(event)"></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th><input type="button" value="4" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="5" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="6" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="*" onclick="getData(event)"></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th><input type="button" value="1" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="2" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="3" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="-" onclick="getData(event)"></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th><input type="button" value="0" onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="." onclick="getData(event)"></th>-->
+<!--        <th><input type="button" value="=" onclick="getResult()"></th>-->
+<!--        <th><input type="button" value="+" onclick="getData(event)"></th>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<script>-->
+<!--    let pheptinh = ''-->
+<!--    function getData(event) {-->
+<!--        let data = event.target.value-->
+<!--        pheptinh+=data-->
+<!--        document.getElementById('calc').value=pheptinh-->
+<!--    }-->
+<!--    function clearData() {-->
+<!--        pheptinh=''-->
+<!--        document.getElementById('calc').value='0'-->
+<!--    }-->
+<!--    function getResult() {-->
+<!--        let a = document.getElementById('calc').value;-->
+<!--        let resurlt = eval(a)-->
+<!--        pheptinh=resurlt-->
+<!--        document.getElementById('calc').value = pheptinh;-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>
