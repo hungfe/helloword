@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="Nhập số tiền" id="input1">
+        </td>
+        <td><select>
+            <option>USD</option>
+            <option>VND</option>
+        </select></td><td><select>
+            <option>VND</option>
+            <option>USD</option>
+        </select></td>
+        <td><button onclick="laydulieu()">Convert</button></td>
+    </tr>
+    <tr>
+        <td>Kết quả :<h2 id="hello"></h2></td>
+    </tr>
+</table>
+<script>
+    function laydulieu() {
+        let usd = document.getElementById('input1').value;
+        let tygia = 23000;
+        let vnd = usd*tygia
+        document.getElementById('hello').innerHTML=vnd
+        let vn = document.getElementById('input1').value;
+        let tygia1 = 0.00004;
+        let us = vn*tygia1
+        document.getElementById('hello').innerHTML=us
+    }
+
+</script>
+</body>
+</html>

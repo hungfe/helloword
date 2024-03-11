@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập jame cấu truc điều kiện</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><h1>Tính chỉ số cân nặng</h1></th>
+    </tr>
+    <tr>
+    <td>nhập cân nặng: (kg)<input type="text" id="in1"></td>
+    </tr>
+    <tr>
+        <td>nhập chiều cao: (m)<input type="text" id="in2"></td>
+    </tr>
+    <tr>
+        <td><button onclick="bmi()">Kiểm tra</button></td>
+    </tr>
+    <tr>
+        <th id="ketqua"></th>
+    </tr>
+</table>
+<script>
+    function bmi() {
+        let a = +document.getElementById('in1').value;
+        let b = +document.getElementById('in2').value;
+        let BMI = a / (b*b);
+        if (BMI < 18.5) {
+            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI + 'Underweight'
+        }
+        else if (BMI >= 18.5 && BMI < 25.0 ) {
+            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ '' + BMI +' '+ 'Normal'
+        }
+        else if (BMI >= 25.0 && BMI < 30) {
+            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+' ' + BMI +' '+ 'Overweight'
+        }
+        else {
+            document.getElementById('ketqua').innerHTML=' chỉ số BMI là:'+ ' ' + BMI +' ' + 'Obese'
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+Bài 6
 -Java script là một ngôn ngữ lập trình
 -Để nhúng ta dùng file.js
 Các cách xuất dữ liệu
@@ -9,7 +10,46 @@ Các cách nhập dữ liệu
 -prompt nhập trn h thoại
 -confirm hiện ok hoặc cancle
 -cách nhập bằng ô input
-+tạo thẻ in put xong đặt thẻ input đặt id
++tạo thẻ input xong đặt thẻ input đặt id
 tạo button xong đăt onclick='layDulieu'
 + tạo function laydulieu() { let dulieu = document.getElementById('id ô input').value;
 +alert(duLieu);}
+Bài 7
+-Biến là tên gọi được gắn cho một vùng nhớ chứa d liệu.
+-Dữ liệu được lưu trữ trong vùng nhớ cu biến được gọi là Giá trị(value)
+-các kiểu dữ liệu:
+                  + 5  số/giá trị số nguyên(integer)
+                  + 5.5 số/giá trị số thập phân(decimal)
+                  + "Black" chuỗi(string)
+                  + 'C' kí tự(character)
+                  + true or fales gi trị logic(boolean)
+-Toán tử
++ toán tử toán học: + - * / % ++ --
++ toán tử gán: += -= *= /= %=
+               ví dụ: x = 10;
+               x += 5 ==> x = 10 + 5
++toán tử cộng chuỗi: ví dụ " hello " + 'C' + 2
++jjtoán tử so sánh: == === != !== > < >= <=
++toán tử logic: && || ! ví dụ : a || b
+                                +  true true true
+                                +  true false true
+                                +  false true true
+                                +  false false false
+                                a && b
+                                +  true true true
+                                +  true false false
+                                +  false true false
+                                +  false false false
+                                a ! b
+                                +  false true
+                                +  true false
++toán tử typeof: ví dụ: typeof "John" string
+                        typeof 5 number
+                        typeof true boolean
+Bài 8 : Cấu trúc đều kiện
++ có các loại điều kiện :
+                         if - else
+                         if bậc thang elseif
+                         if lồng nhau if ( if ())
++switch case :
+
